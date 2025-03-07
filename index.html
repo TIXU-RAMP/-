@@ -6,40 +6,38 @@
     <title>Online Game Website</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000; /* Black background */
-            color: #fff; /* White text */
+            background-color: #1a1a1a; /* Dark gray background */
+            color: #f0f0f0; /* Light gray text */
         }
 
         header {
-            background-color: #222;
-            color: #00ff00; /* Green text */
-            padding: 10px 0;
+            background-color: #333;
+            color: #4caf50; /* Green text */
+            padding: 20px 0;
             text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+            border-bottom: 2px solid #4caf50;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: #333;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+            background-color: #444;
+            padding: 10px 0;
         }
 
         nav a {
-            color: #00ff00; /* Green text */
-            padding: 15px;
+            color: #4caf50; /* Green text */
+            padding: 10px 20px;
             text-decoration: none;
-            text-align: center;
+            transition: background-color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #00ff00;
-            color: #000; /* Black text on hover */
+            background-color: #4caf50;
+            color: #1a1a1a; /* Dark gray text on hover */
         }
 
         main {
@@ -47,45 +45,49 @@
         }
 
         h2, h3 {
-            color: #00ff00; /* Green text */
+            color: #4caf50; /* Green text */
         }
 
         .game {
-            border: 1px solid #444;
-            padding: 15px;
-            margin: 15px 0;
-            background-color: #111; /* Dark background */
+            border: 1px solid #555;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #222; /* Dark background */
             border-radius: 10px;
-            box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .game:hover {
+            box-shadow: 0 0 15px #4caf50;
         }
 
         .game p {
-            color: #bbb; /* Lighter shade of text */
+            color: #ccc; /* Lighter shade of text */
         }
 
         footer {
-            background-color: #222;
-            color: #00ff00; /* Green text */
+            background-color: #333;
+            color: #4caf50; /* Green text */
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+            border-top: 2px solid #4caf50;
         }
 
         button {
-            background-color: #00ff00;
-            color: #000; /* Black text */
+            background-color: #4caf50;
+            color: #1a1a1a; /* Dark gray text */
             border: none;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: #00cc00;
+            background-color: #388e3c;
         }
     </style>
 </head>
