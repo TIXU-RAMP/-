@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Welcome</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -38,6 +38,15 @@
             margin-bottom: 20px;
         }
 
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+            width: 100%;
+        }
+
         button {
             background-color: #4caf50; /* Green background */
             color: white;
@@ -52,13 +61,48 @@
         button:hover {
             background-color: #388e3c; /* Darker green on hover */
         }
+
+        .links {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .links a {
+            display: block;
+            margin: 10px 0;
+            color: #4caf50;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to TIXU</h1>
-        <p>Made from fevber.</p>
-        <button>Learn More</button>
+        <p>Enter the password to proceed.</p>
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="checkPassword()">Submit</button>
+        <div class="links" id="links">
+            <a href="#">Home</a>
+            <a href="#">Game</a>
+            <a href="#">Leaderboard</a>
+            <a href="#">Settings</a>
+        </div>
     </div>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = 'yourpassword'; // Replace with your actual password
+            if (password === correctPassword) {
+                document.getElementById('links').style.display = 'block';
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
 </body>
 </html>
