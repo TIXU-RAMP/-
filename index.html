@@ -5,66 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #333; /* Dark grey background */
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            color: #e0e0e0; /* Light grey text */
+            color: #fff;
         }
 
         .container {
-            background: #444; /* Slightly lighter grey background */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             text-align: center;
             width: 80%;
-            max-width: 600px;
+            max-width: 500px;
+            transform: scale(0.9);
+            animation: scaleUp 0.5s ease-in-out forwards;
+        }
+
+        @keyframes scaleUp {
+            to {
+                transform: scale(1);
+            }
         }
 
         h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            color: #4caf50; /* Green color */
+            color: #4caf50;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         p {
             font-size: 1.2em;
             margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out 0.5s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
 
         input[type="password"] {
-            padding: 10px;
+            padding: 12px;
             margin-bottom: 20px;
-            border-radius: 5px;
+            border-radius: 25px;
             border: none;
             font-size: 1em;
             width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            text-align: center;
+            backdrop-filter: blur(10px);
         }
 
         button {
-            background-color: #4caf50; /* Green background */
+            background-color: #4caf50;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 25px;
+            border-radius: 25px;
             font-size: 1em;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         button:hover {
-            background-color: #388e3c; /* Darker green on hover */
+            background-color: #388e3c;
+            transform: translateY(-3px);
         }
 
         .links {
             display: none;
             margin-top: 20px;
+            animation: fadeIn 1s ease-in-out forwards;
+            opacity: 0;
         }
 
         .links a {
@@ -73,10 +110,11 @@
             color: #4caf50;
             text-decoration: none;
             font-size: 1.2em;
+            transition: color 0.3s;
         }
 
         .links a:hover {
-            text-decoration: underline;
+            color: #76ff03;
         }
     </style>
 </head>
