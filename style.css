@@ -1,4 +1,17 @@
 /* Reset some default styles */
+.search-bar {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    transition: width 0.4s ease-in-out;
+}
+
+.search-bar:focus {
+    width: 300px;
+}  
+
 * {
     margin: 0;
     padding: 0;
