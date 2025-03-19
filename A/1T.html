@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen</title>
+    <style>
+        /* Full screen container for loading screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Loading screen container */
+        .loading-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999;
+        }
+
+        /* Loading image */
+        .loading-image {
+            width: 50px; /* Adjust the size of the spinner */
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        /* Loading text */
+        .loading-text {
+            font-size: 30px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        /* Exit button */
+        .exit-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .exit-button:hover {
+            background-color: darkred;
+        }
+
+        /* Iframe styles */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Full screen loading screen -->
+    <div class="loading-container" id="loadingScreen">
+        <img src="loading-spinner.gif" alt="Loading..." class="loading-image"> <!-- Replace with your image path -->
+        <div class="loading-text">Loading Screen</div>
+        <button class="exit-button" onclick="exitLoadingScreen()">Exit</button>
+    </div>
+
+    <!-- Iframe content -->
+    <iframe id="iframe" src="https://cloud.onlinegames.io/games/2025/unity/nuts-and-bolts-puzzle/index-og.html" onload="hideLoadingScreen()"></iframe>
+
+    <script>
+        // Function to hide the loading screen when iframe is loaded
+        function hideLoadingScreen() {
+            document.getElementById('loadingScreen').style.display = 'none';
+        }
+
+        // Function to manually exit the loading screen
+        function exitLoadingScreen() {
+            document.getElementById('loadingScreen').style.display = 'none';
+        }
+    </script>
+    
+</body>
+</html>
