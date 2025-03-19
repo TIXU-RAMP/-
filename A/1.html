@@ -28,7 +28,7 @@
         }
 
         .container {
-            width: 80%;
+            width: 100%;
             margin: auto;
             text-align: center;
         }
@@ -49,13 +49,12 @@
             font-weight: bold;
         }
 
-        .featured-games, .game-list, .game-card {
+        .featured-games, .game-card {
             margin: 20px;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 60%;
         }
 
         .fade-in {
@@ -69,8 +68,8 @@
         }
 
         img {
-            width: 600px;
-            height: 300px;
+            width: 100%;
+            height: auto;
             border-radius: 8px;
         }
 
@@ -101,8 +100,19 @@
         .game-card {
             flex: 1 1 calc(33% - 20px);
             box-sizing: border-box;
-            width: 600px;
-            height: 300px;
+            max-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .game-card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .game-card {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
@@ -127,9 +137,9 @@
             <h2>Featured Games</h2>
             <div class="game-list">
                 <div class="game-card">
-                    <img src="https://via.placeholder.com/200x150" alt="Game 1">
-                    <h3>Game 1</h3>
-                    <a href="#" class="play-btn">Play Now</a>
+                    <img src="https://www.onlinegames.io/media/posts/965/responsive/nuts-and-bolts-puzzle-xs.jpg" alt="Game 1">
+                    <h3>Mahjong/h3>
+                    <a href="A/T1" class="play-btn">Play Now</a>
                 </div>
                 <div class="game-card">
                     <img src="https://via.placeholder.com/200x150" alt="Game 2">
